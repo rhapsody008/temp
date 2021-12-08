@@ -7,15 +7,18 @@ import (
 )
 
 func main() {
+
+	temp()
+
 	fmt.Println(quote.Go())
 
 	var inta float32
 	var intb float32
 	var selectresult string
 
-	fmt.Println("Enter first number:")
+	fmt.Print("Enter first number: ")
 	fmt.Scanln(&inta)
-	fmt.Println("Enter second number:")
+	fmt.Print("Enter second number: ")
 	fmt.Scanln(&intb)
 
 	fmt.Println("Would you like: a.add, b.substract, c.multiply or d.divide? (Please specify a, b, c or d)")
@@ -29,7 +32,26 @@ func main() {
 	case "c":
 		fmt.Println("the result is ", inta*intb)
 	case "d":
-		fmt.Println("the result is ", inta/intb)
+		if intb == 0 {
+			fmt.Println("Error! Second Number cannot be ZERO when executing division!")
+		} else {
+			fmt.Println("the result is ", inta/intb)
+		}
+
 	}
+
+}
+
+func temp() {
+	var a int
+	type hotdog int
+	var b hotdog
+
+	a = 42
+	b = 43
+	fmt.Println(a)
+	fmt.Printf("%T\n", a)
+	fmt.Println(b)
+	fmt.Printf("%T\n", b)
 
 }
