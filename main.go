@@ -37,6 +37,8 @@ func main() {
 		} else {
 			fmt.Println("the result is ", inta/intb)
 		}
+	default:
+		fmt.Println("Please choose between a, b, c and d.")
 
 	}
 
